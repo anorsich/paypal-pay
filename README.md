@@ -1,4 +1,4 @@
-Minimalist feed service using mongo 
+Minimalist 'send money to email' - using the Paypal API
 --
 [![Build Status](https://travis-ci.org/ogt/paypal-pay.png)](https://travis-ci.org/ogt/paypal-pay)
 
