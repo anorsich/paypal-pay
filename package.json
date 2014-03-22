@@ -1,0 +1,31 @@
+{
+  "name": "paypal-pay",
+  "description": "Minimalist 'send money to email' - using the Paypal API",
+  "homepage": "https://github.com/ogt/paypal-pay",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ogt/paypal-pay.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js",
+  },
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "keywords": [
+    "paypal",
+    "payment",
+    "email",
+    "api",
+    "adaptive"
+  ],
+  "author": {
+    "name": "Odysseas Tsatalos",
+    "email": "odysseas@tsatalos.com",
+    "url": "http://tsatalos.gr"
+  }
+}
