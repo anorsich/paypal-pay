@@ -9,7 +9,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "make test"
   },
   "license": "MIT",
   "dependencies": {},
