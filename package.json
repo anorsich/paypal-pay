@@ -9,12 +9,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js",
+    "test": "tap test/*.js"
   },
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "tap": "~0.4.8",
+    "jshint": "~2.4.4"
   },
   "keywords": [
     "paypal",
