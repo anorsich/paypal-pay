@@ -7,15 +7,21 @@
     "type": "git",
     "url": "git://github.com/ogt/paypal-pay.git"
   },
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "make test"
+    "test": "mocha -t 60000"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "paypal-adaptive": "~0.4.1"
+  },
   "devDependencies": {
     "tap": "~0.4.8",
-    "jshint": "~2.4.4"
+    "jshint": "~2.4.4",
+    "mocha": "*",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-mocha-test": "~0.8.1"
   },
   "keywords": [
     "paypal",
@@ -28,5 +34,10 @@
     "name": "Odysseas Tsatalos",
     "email": "odysseas@tsatalos.com",
     "url": "http://tsatalos.gr"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ogt/paypal-pay/issues",
+    "email": "andrew@paralect.com"
+  },
+  "readmeFilename": "README.md"
 }

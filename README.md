@@ -6,18 +6,29 @@ Minimalist 'send money to email' - using the Paypal API
 ```
 var pay = require('paypal-pay')({
 {
-      'client_id': 'EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM',
-      'client_secret': 'EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM',
-      'sandbox' : false  // defaults to true
+      //required parameters
+      'userId': '',
+      'password': '',
+      'signature' : '',
+
+      //optional parameters and their defaults
+      'sandbox': true,
+      'feesPayer': 'SENDER',
+      'currencyCode': 'USD',
 });
 
-pay('joe@doe.com',18.00,'USD',"This is an example memo', function(err,response){
-    // ...
+pay('john@doe.com', 18.00, "This is an example memo', function(err, response){
+    if(err){
+        //handle error here
+        return;
+    }
+
+    //redirect user to response.paymentApprovalUrl in order to approve payment
 });
 
 ```
-The module is a simple wrapper on top of the paypal-rest-sdk module
-It assumes that the sender pays all fees,
+The module is a simple wrapper on top of the (paypal-adaptive-sdk-nodejs)[https://github.com/Ideame/paypal-adaptive-sdk-nodejs] module
+By default sender pays all fees.
 
 ## Installation 
 
@@ -25,3 +36,5 @@ Installing the module
 ```
 npm install paypal-pay
 ```
+
+
