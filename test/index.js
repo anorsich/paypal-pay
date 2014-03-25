@@ -12,19 +12,25 @@ describe('Paypal Pay', function () {
 
         assert.throws(
             function() {
-                pay = require("./../lib/index")({password: "", signature: ""});
+                pay = require("./../lib/index")({password: "", senderEmail: "", signature: ""});
             }
         );
 
         assert.throws(
             function() {
-                pay = require("./../lib/index")({userId: "", signature: ""});
+                pay = require("./../lib/index")({userId: "", senderEmail: "", signature: ""});
             }
         );
 
         assert.throws(
             function() {
-                pay = require("./../lib/index")({userId: "", password: ""});
+                pay = require("./../lib/index")({userId: "", senderEmail: "", password: ""});
+            }
+        );
+
+        assert.throws(
+            function() {
+                pay = require("./../lib/index")({userId: "", signature: "", password: ""});
             }
         );
 
@@ -32,33 +38,26 @@ describe('Paypal Pay', function () {
     });
 
     pay = require("./../lib/index")({
-        userId: "andrew_api1.paralect.com",
-        password: "1391019821",
-        signature: "A9b5X.hdwfxbObBKlebSFyR.AVVPAzmOPLIkeXwI9V60HxtmO2-B6EDY"
+        userId: "paypal-pay_api1.paypal-sandbox.com",
+        password: "1395729654",
+        signature: "AsHqyglTRtUb0nM8zhWHTMzq26dWANcKuaiC.LHyJfG0zohPOgJ5F5Ks",
+        senderEmail: "paypal-pay@paypal-sandbox.com"
     });
 
-    it('pay and verify that payment was created on paypal', function(done){
-        pay("andrew@paralect.com", 10.00, "This is test payment", function(err, response){
+    it('pay and verify that payment completed', function(done){
+        pay("paypal-pay-receiver@sandbox-mail.com", 10.00, "This is test payment", function(err, response){
             assert.ifError(err);
 
             assert.equal(response.responseEnvelope.ack, "Success");
 
             assert.equal(response.httpStatusCode, 200);
 
+            assert.equal(response.paymentExecStatus, "COMPLETED");
+
             console.log("\nPaypal response sample:\n");
             console.log(response);
 
-            pay.getPaymentDetails(response.payKey, function(err, response){
-                assert.ifError(err);
-
-                assert.equal(response.status, "CREATED");
-
-                assert.equal(response.responseEnvelope.ack, "Success");
-
-                assert.equal(response.httpStatusCode, 200);
-
-                done();
-            });
+            done();
         });
     });
 
