@@ -1,8 +1,17 @@
 Minimalist 'send money to email' - using the Paypal API
 --
-[![Build Status](https://travis-ci.org/ogt/paypal-pay.png)](https://travis-ci.org/ogt/paypal-pay)
 
-## Description
+The module is a simple wrapper on top of the [paypal-adaptive-sdk-nodejs](https://github.com/Ideame/paypal-adaptive-sdk-nodejs) module.
+By default sender pays all fees.
+
+## Installation
+
+Installing the module
+```
+npm install paypal-pay
+```
+
+## How to use
 ```
 var pay = require('paypal-pay')({
 {
@@ -31,18 +40,8 @@ pay('john@doe.com', 18.00, "This is an example memo', function(err, response){
 });
 
 ```
-The module is a simple wrapper on top of the [paypal-adaptive-sdk-nodejs](https://github.com/Ideame/paypal-adaptive-sdk-nodejs) module
-By default sender pays all fees.
 
-## Installation 
-
-Installing the module
-```
-npm install paypal-pay
-
-```
-
-## Notes:
+## Useful information:
 
 [Paypal adaptive payments api documentation.](https://developer.paypal.com/docs/classic/api/adaptive-payments/Pay_API_Operation/)
 
@@ -124,6 +123,12 @@ Error:
 }
 
 ```
+
+## Contribution
+
+We are happy to accept pull requests.
+Before issue pull request please make sure that tests are passing and code formatting is okay via ```grunt``` command.
+
 
 
 

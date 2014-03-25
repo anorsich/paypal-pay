@@ -1,11 +1,11 @@
 {
   "name": "paypal-pay",
   "description": "Minimalist 'send money to email' - using the Paypal API",
-  "homepage": "https://github.com/ogt/paypal-pay",
+  "homepage": "https://github.com/anorsich/paypal-pay",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ogt/paypal-pay.git"
+    "url": "https://github.com/anorsich/paypal-pay"
   },
   "main": "./lib/index.js",
   "scripts": {
@@ -25,18 +25,20 @@
   },
   "keywords": [
     "paypal",
+    "classic",
     "payment",
+    "withdraw",
     "email",
     "api",
     "adaptive"
   ],
   "author": {
-    "name": "Odysseas Tsatalos",
-    "email": "odysseas@tsatalos.com",
-    "url": "http://tsatalos.gr"
+    "name": "Andrew Orsich",
+    "email": "andrew@paralect.com",
+    "url": "http://paralect.com/"
   },
   "bugs": {
-    "url": "https://github.com/ogt/paypal-pay/issues",
+    "url": "https://github.com/anorsich/paypal-pay/issues?state=open",
     "email": "andrew@paralect.com"
   },
   "readmeFilename": "README.md"
