@@ -2,14 +2,14 @@
   "name": "paypal-pay",
   "description": "Minimalist 'send money to email' - using the Paypal API",
   "homepage": "https://github.com/anorsich/paypal-pay",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/anorsich/paypal-pay"
   },
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha -t 60000"
+    "tests": "grunt"
   },
   "license": "MIT",
   "dependencies": {

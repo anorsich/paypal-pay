@@ -54,9 +54,6 @@ describe('Paypal Pay', function () {
 
             assert.equal(response.paymentExecStatus, "COMPLETED");
 
-            console.log("\nPaypal response sample:\n");
-            console.log(response);
-
             done();
         });
     });
